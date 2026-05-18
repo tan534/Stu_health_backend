@@ -19,6 +19,4 @@ WORKDIR /app
 # 从构建阶段复制打好的 Jar 包
 COPY --from=builder /app/target/campus-health-backend-0.0.1-SNAPSHOT.jar app.jar
 
-EXPOSE 10000
-
 CMD ["java", "-Xmx300m", "-Xms300m", "-jar", "app.jar"]

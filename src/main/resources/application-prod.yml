@@ -1,6 +1,6 @@
 # 线上配置文件
 server:
-  port: 10000
+  ${PORT:10000}
 
 spring:
   # Railway MySQL 数据库配置（
