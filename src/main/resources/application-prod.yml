@@ -1,0 +1,23 @@
+# 线上配置文件
+server:
+  port: 10000
+
+spring:
+  # Railway MySQL 数据库配置（
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://autorack.proxy.rlwy.net:25349/railway?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: sUrcdbSHREuGyEEvvcQqVdaeKfZwXmtY
+
+mybatis-plus:
+  configuration:
+    # 生产环境关闭日志，避免日志刷屏
+    log-impl: ''
+
+# 线上接口文档，基础认证防止别人乱访问
+knife4j:
+  basic:
+    enable: true
+    username: root
+    password: 123456

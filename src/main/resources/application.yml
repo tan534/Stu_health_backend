@@ -1,0 +1,34 @@
+# 乐健 - 智能健康习惯管理系统
+# 面向大学生群体的健康管理平台
+spring:
+  application:
+    name: student-health-backend
+  profiles:
+    active: prod
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  session:
+    timeout: 2592000
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/student_health_system
+    username: root
+    password: Unonly@2024
+server:
+  address: 0.0.0.0
+  port: 8101
+  servlet:
+    context-path: /api
+    # cookie 30 天过期
+    session:
+      cookie:
+        max-age: 2592000
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 接口文档配置
+knife4j:
+  enable: true
